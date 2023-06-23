@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO Website</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    
+</head>
+<body>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Img/1.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>A highly creative Web Designer with one year of experience working as a Junior Developer.<br> Proven skills in HTML, CSS Basics of Javascript.<br> Ability to work independently and collaborate effectively with a team.
+                        Excellent written and verbal communication skills. seeking an entry-level position in web design.</p>
+
+                        <div class="tab-title">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>HTML/CSS/JS</span><br>Designing Website</li>
+                                <li><span>Web Develpment</span><br>Web app</li>
+                                <li><span>C/JAVA/PYTHON</span><br>Coding Skills</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2022 - Current</span><br>Student at KIET Group Of Institution Ghaziabad.</li>
+                                <li><span>2019 - 2022</span><br>Diploma in IT.</li>
+                                <li><span>2017 - 2018</span><br>10th from BSEB board.</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks= document.getElementsByClassName("tab-links");
+        var tabcontents= document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
